@@ -160,7 +160,7 @@ class HandlebarsNode(VerbatimNode):
             attrs.append('data-template-name=%s' % self.template_name)
         for arg, val in self.extended_args.items():
             attrs.append('%s=%s' % (arg, val))
-        return """<script %s type="text/x-handlebars-template">%s</script>""" % (' '.join(attrs), output)
+        return """<script %s type="text/x-handlebars">%s</script>""" % (' '.join(attrs), output)
 
 
 @register.tag
